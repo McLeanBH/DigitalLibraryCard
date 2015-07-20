@@ -16,15 +16,16 @@ var DigitalLibraryCard = React.createClass({
       <View style={styles.container}>
         <Text style={styles.headline}>
           DigitalLibraryCard
+          </Text>
           <Text style={styles.label}>
             Find books containing:
           </Text>
           <TextInput
-          placeholder="Search!"
-          returnKeyType="search"
-          enablesReturnKeyAutomatically={true}
-          onEndEditing={ event => console.log(event.nativeEvent.text)}
-          style={styles.textInput}/>
+            placeholder="Search!"
+            returnKeyType="search"
+            enablesReturnKeyAutomatically={true}
+            onEndEditing={ event => console.log(event.nativeEvent.text)}
+            style={styles.textInput}/>
         </View>
       );
     }
@@ -36,7 +37,7 @@ var DigitalLibraryCard = React.createClass({
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#F85931',
+      backgroundColor: Math.random() > 0.5 ? '#5AC8FA' : '#FF692D',
     },
     headline: {
       fontSize: 36,
@@ -60,5 +61,5 @@ var DigitalLibraryCard = React.createClass({
       padding: 8,
     }
   });
-  
+
 AppRegistry.registerComponent('DigitalLibraryCard', () => DigitalLibraryCard);
